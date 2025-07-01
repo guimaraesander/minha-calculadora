@@ -57,6 +57,7 @@ body {
 
 .operator {
   background-color: #FF9500; 
+}
 
 .operator:active {
   background-color: #ffb347;
