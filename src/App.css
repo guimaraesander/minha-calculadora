@@ -56,15 +56,14 @@ body {
 }
 
 .operator {
-  background-color: #FF9500; /* Laranja */
-}
+  background-color: #FF9500; 
 
 .operator:active {
   background-color: #ffb347;
 }
 
 .key.zero {
-  grid-column: span 2; /* O botão 0 ocupa 2 colunas */
+  grid-column: span 2; 
   border-radius: 35px;
   justify-content: flex-start;
   padding-left: 25px;
