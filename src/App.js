@@ -7,7 +7,7 @@ function App() {
   const [operator, setOperator] = useState(null);
   const [waitingForOperand, setWaitingForOperand] = useState(false);
 
-  
+
   const inputDigit = (digit) => {
     if (waitingForOperand) {
       setDisplayValue(String(digit));
@@ -17,14 +17,14 @@ function App() {
     }
   };
 
-  
+
   const inputDecimal = () => {
     if (!displayValue.includes('.')) {
       setDisplayValue(displayValue + '.');
     }
   };
 
-  
+
   const clearAll = () => {
     setDisplayValue('0');
     setPreviousValue(null);
@@ -32,7 +32,7 @@ function App() {
     setWaitingForOperand(false);
   };
 
-  
+
   const calculate = {
     '/': (first, second) => first / second,
     '*': (first, second) => first * second,
@@ -41,7 +41,7 @@ function App() {
     '=': (first, second) => second,
   };
 
- 
+
   const performOperation = (nextOperator) => {
     const inputValue = parseFloat(displayValue);
 
@@ -57,24 +57,24 @@ function App() {
     setOperator(nextOperator);
 
     if (nextOperator === '=') {
-       if (operator && previousValue !== null) {
-          const result = calculate[operator](previousValue, inputValue);
-          setDisplayValue(String(result));
-          setPreviousValue(null);
-          setOperator(null);
-          setWaitingForOperand(true);
-       }
+      if (operator && previousValue !== null) {
+        const result = calculate[operator](previousValue, inputValue);
+        setDisplayValue(String(result));
+        setPreviousValue(null);
+        setOperator(null);
+        setWaitingForOperand(true);
+      }
     }
   };
 
- 
+
   return (
     <div className="calculator">
-      
+
       <div className="display">{displayValue}</div>
 
       <div className="keypad">
-        
+
         <button onClick={clearAll} className="key function">AC</button>
         <button className="key function">±</button>
         <button className="key function">%</button>

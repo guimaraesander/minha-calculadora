@@ -3,7 +3,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f2f5;
+  background-color: #222;
 }
 
 .calculator {
@@ -33,21 +33,24 @@ body {
 
 .key {
   height: 65px;
-  border-radius: 50%; 
+  border-radius: 50%;
   border: none;
   font-size: 1.8em;
   color: white;
-  background-color: #333;
+
+  background-color: #313131;
   cursor: pointer;
   transition: background-color 0.2s;
 }
 
 .key:active {
+
   background-color: #555;
 }
 
 .function {
-  background-color: #A5A5A5;
+
+  background-color: #a5a5a5;
   color: black;
 }
 
@@ -56,15 +59,16 @@ body {
 }
 
 .operator {
-  background-color: #FF9500; 
+
+  background-color: #505050;
 }
 
 .operator:active {
-  background-color: #ffb347;
+  background-color: #777;
 }
 
 .key.zero {
-  grid-column: span 2; 
+  grid-column: span 2;
   border-radius: 35px;
   justify-content: flex-start;
   padding-left: 25px;
